@@ -3,7 +3,7 @@ requires=["setuptools>=68"]
 build-backend="setuptools.build_meta"
 
 [project]
-name="c64-stunt-car-racer-re-toolkit"
+name="amiga-stunt-car-racer-track-toolkit"
 version="1.7.0"
 description="Reverse-engineering toolkit for Stunt Car Racer Amiga track resources, protected-disk evidence, editor interchange, and mesh export."
 readme="README.md"

@@ -1,8 +1,8 @@
-# C64 Stunt Car Racer RE Toolkit
+# Amiga Stunt Car Racer Track Toolkit
 
 Reverse-engineering toolkit for the Amiga version of **Stunt Car Racer**. It focuses on protected-disk evidence, the verified 804-byte native track resource format, editor-safe JSON interchange, guarded reinsertion workflows, and OBJ mesh/export helpers for analysis.
 
-The repository is named in the same `c64-` style as the surrounding collection, but the target studied here is the Amiga/Motorola 68000 game data format.
+The repository focuses on the Amiga/Motorola 68000 game data format and the native Stunt Car Racer track resource pipeline.
 
 ## What This Contains
 
