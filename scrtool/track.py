@@ -25,7 +25,7 @@ def encode(t):
   for v in a:w.u16be(v)
  w.u8(t.boost);w.u8(t.super_boost);b=w.finish();assert len(b)==SIZE;return b
 def editor_dict(t):
- return {"schema":"scr-editor-v1","native":asdict(t),"pieces":[{"index":i,"x":t.xz[i]>>4,"z":t.xz[i]&15,"config":t.config[i],"geometry":t.config[i]&15,"quadrant":(t.config[i]>>4)&3} for i in range(t.sections)]}
+ return {"schema":"scr-editor-v1","native":asdict(t),"pieces":[{"index":i,"x":t.xz[i]&15,"z":t.xz[i]>>4,"config":t.config[i],"geometry":t.config[i]&15,"quadrant":(t.config[i]>>4)&3} for i in range(t.sections)]}
 
 def from_editor_dict(d):
  if d.get("schema")!="scr-editor-v1":raise ValidationError("unsupported editor schema")
@@ -40,7 +40,10 @@ def from_editor_dict(d):
   seen.add(i);x=p.get("x");z=p.get("z");cfg=p.get("config")
   if not isinstance(x,int) or not 0<=x<=15 or not isinstance(z,int) or not 0<=z<=15:raise ValidationError("grid coordinate")
   if not isinstance(cfg,int) or not 0<=cfg<=255:raise ValidationError("config")
-  t.xz[i]=(x<<4)|z;t.config[i]=cfg
+  t.xz[i]=(z<<4)|x;t.config[i]=cfg
   for key,attr in (("left_profile","left_profile"),("right_profile","right_profile"),("left_height","left_height"),("right_height","right_height")):
-   if key in p:getattr(t,attr)[i]=p[key]
+   if key in p:
+    v=p[key]
+    if not isinstance(v,int):raise ValidationError(key)
+    getattr(t,attr)[i]=v
  t.validate();return t

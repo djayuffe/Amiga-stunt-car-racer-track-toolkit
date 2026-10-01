@@ -7,10 +7,10 @@ import json, pathlib, sys
 sys.path.insert(0,str(pathlib.Path(__file__).parent))
 from track804_codec_verified import decode,encode,to_dict,from_dict
 
-def unpack_xz(v): return ((v>>4)&15, v&15)
+def unpack_xz(v): return (v&15, (v>>4)&15)
 def pack_xz(x,z):
     if not(0<=x<16 and 0<=z<16): raise ValueError("grid coordinate outside 0..15")
-    return (x<<4)|z
+    return (z<<4)|x
 
 def export_editor(raw):
     t=decode(raw)

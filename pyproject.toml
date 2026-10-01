@@ -4,7 +4,7 @@ build-backend="setuptools.build_meta"
 
 [project]
 name="amiga-stunt-car-racer-track-toolkit"
-version="1.7.0"
+version="1.7.1"
 description="Reverse-engineering toolkit for Stunt Car Racer Amiga track resources, protected-disk evidence, editor interchange, and mesh export."
 readme="README.md"
 requires-python=">=3.9"

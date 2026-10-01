@@ -114,8 +114,9 @@ The Blender importer reads exported JSON and creates preview geometry with nativ
 
 This cleanup fixed these release issues:
 
-- Project metadata now matches the archive version: `1.7.0`.
+- Project metadata now records the audited package version: `1.7.1`.
 - The missing `tools/track804_codec.py` compatibility module has been restored so the full test suite runs.
+- Editor interchange now consistently uses the documented native packed coordinate contract: low nibble = X, high nibble = Z.
 - GPLv3 licensing, copyright attribution, CI, package metadata, and command entry points are explicit.
 - Proprietary disk images are ignored to avoid accidental public redistribution.
 - The README now separates verified facts, experimental helpers, and local-data requirements.

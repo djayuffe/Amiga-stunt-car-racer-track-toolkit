@@ -7,6 +7,7 @@ t=Track804(3,1,[0]*100,[0]*100,[0]*100,[0]*100,[0]*100,[0]*100,4,9)
 t.road_xz[:3]=[pack_xz(1,2),pack_xz(1,3),pack_xz(2,3)]
 t.angle_template[:3]=[0x10,0x21,0x36]
 raw=encode(t); d=export_editor(raw)
+assert d["pieces"][0]["grid_x"]==1 and d["pieces"][0]["grid_z"]==2
 assert import_editor(d)==raw
 d["pieces"][1]["grid_x"]=7
 raw2=import_editor(d); t2=decode(raw2)

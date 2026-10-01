@@ -73,8 +73,8 @@
     },
     {
       "path": "NOTICE",
-      "bytes": 492,
-      "sha256": "e23f875144da45d6d487f5b50290dc0d9a4e4b66e9392a605dd839cac120ac78"
+      "bytes": 501,
+      "sha256": "6b42b3f800ab734a5b300afd7f3e1b38efee34b8cdc853803ddf79dbc32e92e0"
     },
     {
       "path": "PRODUCT_TEST_RESULTS.txt",
@@ -83,8 +83,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5668,
-      "sha256": "3e09f4b8ed15c4702401f392560f0be6a453458cc8a52bf039413cf79dd6499a"
+      "bytes": 5777,
+      "sha256": "83e47de306e46ed63373def1f4790693360e4dfce75d9697a61478dd68aa901a"
     },
     {
       "path": "README_FINAL.md",
@@ -288,8 +288,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 1323,
-      "sha256": "b37cbdd7a48e76822777dd5ca13547403d084280700dfe7383cf2bb80d76ee10"
+      "bytes": 1328,
+      "sha256": "7eff757ab68c3df71d985900274b5da6c6fdbba23d5d843da773e0add041ae54"
     },
     {
       "path": "raw/README.md",
@@ -304,7 +304,7 @@
     {
       "path": "scrtool/__init__.py",
       "bytes": 20,
-      "sha256": "71716996cea19ebf3018b073877109026cd71c9d302b991967d832d7be90ea61"
+      "sha256": "809e36251e4ad7ad158aafff4aab28831d0ef90b30d4879eda5332565bd693a7"
     },
     {
       "path": "scrtool/adf.py",
@@ -378,8 +378,8 @@
     },
     {
       "path": "scrtool/track.py",
-      "bytes": 2820,
-      "sha256": "1ee085a5d6040a96de231fec17a3b08701f720e98a2a9c61b7bc11d2ebe4ac99"
+      "bytes": 2889,
+      "sha256": "3a8a3df8f0b2ea7c02abfb74be719498f5890eeea6f090109be11b91785302a8"
     },
     {
       "path": "scrtool/transaction.py",
@@ -453,8 +453,8 @@
     },
     {
       "path": "tests/test_editor_interchange.py",
-      "bytes": 609,
-      "sha256": "4a7bbaab8c97f165781705c9e0ed63490b450187ae6d5f24bdc5c41463094a96"
+      "bytes": 676,
+      "sha256": "ecdbd139260c1561c5cccfea1cdecf0f7aa755fa4acf692f08c2a9709833d643"
     },
     {
       "path": "tests/test_missing_logic.py",
@@ -468,8 +468,8 @@
     },
     {
       "path": "tests/test_release11.py",
-      "bytes": 497,
-      "sha256": "3d44933e7afd771b2863c98acd4dea5afda91924c1b35bd32843f558cc54126d"
+      "bytes": 554,
+      "sha256": "f6d1e4860291574ca3a219782b278a8299b73ac84010d4d4c489baadb8b547d9"
     },
     {
       "path": "tests/test_release12.py",
@@ -539,7 +539,7 @@
     {
       "path": "tools/editor_interchange.py",
       "bytes": 2236,
-      "sha256": "8d0b50f9a31cd102e40f64a878e310d7192baef91fd240aa1dc3550b1fec4075"
+      "sha256": "e0b35674378780f49d3321e625d71717b823e17799efc4f2b374d585f987543e"
     },
     {
       "path": "tools/export_scanned_mesh.py",
