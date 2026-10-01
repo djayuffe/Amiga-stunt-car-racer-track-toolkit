@@ -1,0 +1,1 @@
+# SCR RE Toolkit 1.1\n\nAdds true editor-JSON re-import, edited X/Z/config/profile/height handling, schema validation, duplicate-index rejection, batch track decoding with SHA-256 manifest, no-clobber output policy and `--force`. Atomic writes prevent partial final files.\n

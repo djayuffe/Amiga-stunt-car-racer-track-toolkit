@@ -1,0 +1,2 @@
+import pathlib,sys;sys.path.insert(0,str(pathlib.Path(__file__).parents[1]));from scrtool.disk_evidence import scan
+q=scan(b"x"+(0xDFF024).to_bytes(4,"big")+b"trackdisk.device");assert q["classification"]["raw_custom_chip_evidence"]=="present" and q["classification"]["trackdisk_string"]=="present";assert scan(b"nothing")["classification"]["raw_custom_chip_evidence"]=="not_proven";print("release 1.7 disk evidence: PASS")

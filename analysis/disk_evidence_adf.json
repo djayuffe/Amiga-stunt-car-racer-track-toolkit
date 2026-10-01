@@ -1,0 +1,380 @@
+{
+  "schema": "scr-disk-evidence-v1",
+  "bytes": 901120,
+  "sha256": "548fd106cd62f2d80159d48ddd5293d8b22b6b17f80c17a84a61d75f5c8a9e06",
+  "custom_register_refs": [
+    {
+      "offset": 14322,
+      "register": "DSKLEN",
+      "address": "DFF024",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 403976,
+      "register": "DSKLEN",
+      "address": "DFF024",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11320,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11524,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11594,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 12576,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 57974,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58202,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59454,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59538,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59614,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59636,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 377804,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 396320,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 396354,
+      "register": "DMACON",
+      "address": "DFF096",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11304,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11338,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11366,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 57950,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 57966,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59430,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59462,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59532,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59608,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59644,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 396362,
+      "register": "INTENA",
+      "address": "DFF09A",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11312,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11602,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 11612,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 14314,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 57958,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58334,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58362,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58372,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58388,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58416,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58442,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58452,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58480,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58506,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58532,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58558,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58586,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58602,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58618,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 59598,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 403968,
+      "register": "INTREQ",
+      "address": "DFF09C",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 14334,
+      "register": "ADKCON",
+      "address": "DFF09E",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 58238,
+      "register": "ADKCON",
+      "address": "DFF09E",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 377360,
+      "register": "ADKCON",
+      "address": "DFF09E",
+      "encoding": "absolute32",
+      "strength": "strong"
+    },
+    {
+      "offset": 403988,
+      "register": "ADKCON",
+      "address": "DFF09E",
+      "encoding": "absolute32",
+      "strength": "strong"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 159,
+      "text": "Rob Northen"
+    },
+    {
+      "offset": 130,
+      "text": "Protection (C)Copyright 1989 Rob Northen Computing"
+    }
+  ],
+  "classification": {
+    "raw_custom_chip_evidence": "present",
+    "strong_reference_count": 51,
+    "trackdisk_string": "not_found",
+    "note": "Static byte references are evidence candidates, not proof of executed code or a protection format."
+  }
+}

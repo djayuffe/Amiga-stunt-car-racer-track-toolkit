@@ -1,0 +1,22 @@
+{
+  "schema": "scr-disk-evidence-v1",
+  "bytes": 1024,
+  "sha256": "6cb1b1a424198d892da1c34062ba4037aa11757fd451e8dc16fc7dc000319a1c",
+  "custom_register_refs": [],
+  "strings": [
+    {
+      "offset": 159,
+      "text": "Rob Northen"
+    },
+    {
+      "offset": 130,
+      "text": "Protection (C)Copyright 1989 Rob Northen Computing"
+    }
+  ],
+  "classification": {
+    "raw_custom_chip_evidence": "not_proven",
+    "strong_reference_count": 0,
+    "trackdisk_string": "not_found",
+    "note": "Static byte references are evidence candidates, not proof of executed code or a protection format."
+  }
+}

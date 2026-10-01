@@ -1,0 +1,73 @@
+{
+  "size": 901120,
+  "sha256": "548fd106cd62f2d80159d48ddd5293d8b22b6b17f80c17a84a61d75f5c8a9e06",
+  "boot_magic": "DOS\u0000",
+  "nonzero_block_ranges": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      110
+    ],
+    [
+      113,
+      207
+    ],
+    [
+      213,
+      215
+    ],
+    [
+      217,
+      217
+    ],
+    [
+      223,
+      923
+    ]
+  ],
+  "interesting_strings": [
+    {
+      "offset": 130,
+      "text": "Protection (C)Copyright 1989 Rob Northen Computing. All Rights Reserved."
+    },
+    {
+      "offset": 123418,
+      "text": " High Flyer   .b Bully Boy    ml Jumping Jack ,d Road Hog     b.              "
+    },
+    {
+      "offset": 123561,
+      "text": "#LITTLE RAMP     STEPPING STONES HUMP BACK       BIG RAMP        SKI JUMP        DRAW BRIDGE     HIGH JUMP       ROLLER COASTER  "
+    },
+    {
+      "offset": 385224,
+      "text": "Tracks in DIVISION "
+    },
+    {
+      "offset": 385278,
+      "text": "ssssssssssssssssssssTrack:  The "
+    },
+    {
+      "offset": 385338,
+      "text": "Track record"
+    },
+    {
+      "offset": 385381,
+      "text": "New track record"
+    },
+    {
+      "offset": 385424,
+      "text": "NuTRACK BONUS POINTS"
+    },
+    {
+      "offset": 385520,
+      "text": "TRACK  DRIVER   LAP-TIME    DRIVER  RACE-TIME"
+    },
+    {
+      "offset": 407662,
+      "text": "Track:  "
+    }
+  ]
+}

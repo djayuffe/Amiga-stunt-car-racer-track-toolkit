@@ -1,0 +1,14 @@
+{
+  "verified_804_codec": true,
+  "editor_interchange": true,
+  "geometry_candidate_scanner": true,
+  "batch_track_export": true,
+  "guarded_binary_patcher": true,
+  "candidate_point_obj_export": true,
+  "exact_mesh_named_tool_present": false,
+  "native_table_compiler_named_tool_present": false,
+  "protected_adf_bootable_writer_verified": false,
+  "reason_protected_writer": "exact protection/checksum/sector encoding not proven from supplied evidence",
+  "object_polygon_topology_verified": false,
+  "reason_object_topology": "renderer reference chain not yet recovered; topology is not invented"
+}

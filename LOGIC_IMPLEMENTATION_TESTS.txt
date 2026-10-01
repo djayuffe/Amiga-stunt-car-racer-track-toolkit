@@ -1,0 +1,6 @@
+test_track804_verified.py: PASS
+test_editor_interchange.py: PASS
+test_deep_disk.py: PASS
+test_trace_contract.py: PASS
+test_missing_logic.py: PASS
+indexed_mesh_from_abi fixture: PASS

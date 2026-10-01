@@ -1,0 +1,11 @@
+Stunt Car Racer RE Toolkit
+
+Copyright (C) 2026 Ulf Bertilsson
+
+This repository is licensed under the GNU General Public License version 3
+or later. See LICENSE for the full license text.
+
+This project contains reverse-engineering utilities, documentation, tests, and
+fixtures. It does not grant rights to redistribute proprietary Stunt Car Racer
+game data, disk images, or third-party sources. Keep legally obtained game
+media outside public commits unless you have permission to publish it.

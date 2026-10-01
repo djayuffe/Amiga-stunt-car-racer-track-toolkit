@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Experimental codec for the hypothesized expanded track record.
+
+The codec deliberately keeps raw arrays separate from derived geometry.
+No-op decode->encode is byte-identical.
+"""
+from dataclasses import dataclass
+from typing import List
+import struct, json
+
+SIZE=902
+N=100
+
+@dataclass
+class Track804:
+    x: List[int]
+    z: List[int]
+    template: List[int]
+    left_profile: List[int]
+    right_profile: List[int]
+    left_height: List[int]
+    right_height: List[int]
+    standard_boost: int
+    super_boost: int
+
+def decode(data: bytes) -> Track804:
+    if len(data) != SIZE:
+        raise ValueError(f"expected experimental {SIZE} bytes, got {len(data)}")
+    p=0
+    def take(n):
+        nonlocal p
+        b=data[p:p+n]; p+=n; return b
+    x=list(take(N)); z=list(take(N)); template=list(take(N))
+    lp=list(take(N)); rp=list(take(N))
+    lh=list(struct.unpack(">100h", take(200)))
+    rh=list(struct.unpack(">100h", take(200)))
+    standard_boost=take(1)[0]
+    super_boost=take(1)[0]
+    assert p == SIZE
+    return Track804(x,z,template,lp,rp,lh,rh,standard_boost,super_boost)
+
+def encode(t: Track804) -> bytes:
+    arrays=(t.x,t.z,t.template,t.left_profile,t.right_profile,t.left_height,t.right_height)
+    if any(len(a)!=N for a in arrays):
+        raise ValueError("all track arrays must contain exactly 100 entries")
+    b=bytearray()
+    for a in (t.x,t.z,t.template,t.left_profile,t.right_profile):
+        if any(not 0 <= int(v) <= 255 for v in a): raise ValueError("byte field outside 0..255")
+        b.extend(bytes(map(int,a)))
+    for a in (t.left_height,t.right_height):
+        if any(not -32768 <= int(v) <= 32767 for v in a): raise ValueError("height outside int16")
+        b.extend(struct.pack(">100h", *map(int,a)))
+    for v in (t.standard_boost,t.super_boost):
+        if not 0 <= int(v) <= 255: raise ValueError("boost outside 0..255")
+        b.append(int(v))
+    assert len(b)==SIZE
+    return bytes(b)
+
+def to_json_dict(t):
+    return {
+      "schema":"scr-native-804-v1",
+      "x":t.x,"z":t.z,"template":t.template,
+      "left_profile":t.left_profile,"right_profile":t.right_profile,
+      "left_height":t.left_height,"right_height":t.right_height,
+      "standard_boost":t.standard_boost,"super_boost":t.super_boost,
+    }
+
+def from_json_dict(d):
+    if d.get("schema") not in (None,"scr-native-804-v1"):
+        raise ValueError("unsupported schema")
+    return Track804(**{k:d[k] for k in (
+      "x","z","template","left_profile","right_profile",
+      "left_height","right_height","standard_boost","super_boost")})
+
+if __name__=="__main__":
+    import argparse, pathlib
+    ap=argparse.ArgumentParser()
+    sp=ap.add_subparsers(dest="cmd",required=True)
+    d=sp.add_parser("decode"); d.add_argument("input"); d.add_argument("output")
+    e=sp.add_parser("encode"); e.add_argument("input"); e.add_argument("output")
+    a=ap.parse_args()
+    if a.cmd=="decode":
+        t=decode(pathlib.Path(a.input).read_bytes())
+        pathlib.Path(a.output).write_text(json.dumps(to_json_dict(t),indent=2))
+    else:
+        t=from_json_dict(json.loads(pathlib.Path(a.input).read_text()))
+        pathlib.Path(a.output).write_bytes(encode(t))

@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>SCR Track Layout Inspector</title>
+<style>body{font:14px system-ui;margin:20px}canvas{border:1px solid #777;image-rendering:pixelated}.row{display:flex;gap:20px;align-items:flex-start}pre{max-height:700px;overflow:auto;background:#eee;padding:12px;min-width:360px}</style>
+<h1>Stunt Car Racer Track Layout Inspector</h1><p>Load an exported 804-byte track JSON. Click a piece to inspect native fields. This intentionally edits/displays native piece metadata, not invented road geometry.</p>
+<input id=f type=file accept=.json><div class=row><canvas id=c width=640 height=640></canvas><pre id=p>No track loaded.</pre></div>
+<script>
+const c=document.querySelector('#c'),x=c.getContext('2d'),pre=document.querySelector('#p'); let T=null, hit=[];
+function draw(){x.clearRect(0,0,c.width,c.height); hit=[]; if(!T)return; const S=40;
+ for(const q of T.pieces){let px=q.grid_x*S, py=(15-q.grid_z)*S; x.fillStyle=q.index===T.start_piece?'#fff':'#888';x.fillRect(px+2,py+2,S-4,S-4);x.strokeRect(px+2,py+2,S-4,S-4);x.fillStyle='#000';x.fillText(q.index,px+5,py+15);x.fillText('T'+q.template,px+5,py+31);hit.push([px,py,q]);}}
+f.onchange=async()=>{T=JSON.parse(await f.files[0].text());pre.textContent=JSON.stringify({num_pieces:T.num_pieces,start_piece:T.start_piece,standard_boost:T.standard_boost,super_boost:T.super_boost},null,2);draw()};
+c.onclick=e=>{let r=c.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;let h=hit.find(([a,b])=>mx>=a&&mx<a+40&&my>=b&&my<b+40);if(h)pre.textContent=JSON.stringify(h[2],null,2)};
+</script>
